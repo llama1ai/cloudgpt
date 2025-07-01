@@ -1,0 +1,29 @@
+name = "ai-chat-app"
+main = "dist/worker.js"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+
+# KV namespace bindings (optional, for advanced storage)
+# [[kv_namespaces]]
+# binding = "CHAT_STORAGE"
+# id = "your-kv-namespace-id"
+
+[env.production]
+name = "ai-chat-app"
+
+[env.staging]
+name = "ai-chat-app-staging"
+
+# Variables that can be set in the Cloudflare dashboard
+[vars]
+NODE_ENV = "production"
+
+# API keys are hardcoded in the worker code
+
+# Build configuration
+[build]
+command = "npm run build && npx esbuild workers/worker.ts --platform=browser --target=es2022 --bundle --format=esm --outfile=dist/worker.js"
+cwd = "."
+
+# Static file handling - Workers can serve assets from KV or R2
+# For now, assets will be handled by the worker itself

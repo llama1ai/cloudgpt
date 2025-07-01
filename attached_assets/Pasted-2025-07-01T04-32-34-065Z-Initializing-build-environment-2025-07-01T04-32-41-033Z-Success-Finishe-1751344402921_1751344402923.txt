@@ -1,0 +1,70 @@
+2025-07-01T04:32:34.065Z	Initializing build environment...
+2025-07-01T04:32:41.033Z	Success: Finished initializing build environment
+2025-07-01T04:32:41.734Z	Cloning repository...
+2025-07-01T04:32:42.817Z	Restoring from dependencies cache
+2025-07-01T04:32:42.822Z	Restoring from build output cache
+2025-07-01T04:32:42.829Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2025-07-01T04:32:43.230Z	Installing project dependencies: npm clean-install --progress=false
+2025-07-01T04:32:51.011Z	npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+2025-07-01T04:32:51.215Z	npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+2025-07-01T04:33:00.800Z	
+2025-07-01T04:33:00.801Z	added 735 packages, and audited 736 packages in 17s
+2025-07-01T04:33:00.801Z	
+2025-07-01T04:33:00.801Z	166 packages are looking for funding
+2025-07-01T04:33:00.802Z	  run `npm fund` for details
+2025-07-01T04:33:00.838Z	
+2025-07-01T04:33:00.841Z	12 vulnerabilities (1 low, 9 moderate, 2 high)
+2025-07-01T04:33:00.841Z	
+2025-07-01T04:33:00.841Z	To address issues that do not require attention, run:
+2025-07-01T04:33:00.841Z	  npm audit fix
+2025-07-01T04:33:00.841Z	
+2025-07-01T04:33:00.841Z	To address all issues (including breaking changes), run:
+2025-07-01T04:33:00.841Z	  npm audit fix --force
+2025-07-01T04:33:00.842Z	
+2025-07-01T04:33:00.842Z	Run `npm audit` for details.
+2025-07-01T04:33:00.942Z	Executing user deploy command: npx wrangler deploy
+2025-07-01T04:33:02.413Z	
+2025-07-01T04:33:02.414Z	 ⛅️ wrangler 4.22.0
+2025-07-01T04:33:02.414Z	───────────────────
+2025-07-01T04:33:02.484Z	▲ [WARNING] Multiple environments are defined in the Wrangler configuration file, but no target environment was specified for the deploy command.
+2025-07-01T04:33:02.484Z	
+2025-07-01T04:33:02.484Z	  To avoid unintentional changes to the wrong environment, it is recommended to explicitly specify the target environment using the `-e|--env` flag.
+2025-07-01T04:33:02.484Z	  If your intention is to use the top-level environment of your configuration simply pass an empty string to the flag to target such environment. For example `--env=""`.
+2025-07-01T04:33:02.484Z	
+2025-07-01T04:33:02.484Z	
+2025-07-01T04:33:02.485Z	[custom build] Running: ./build-worker.sh
+2025-07-01T04:33:02.498Z	[custom build] /bin/sh: 1: ./build-worker.sh: Permission denied
+2025-07-01T04:33:02.498Z	[custom build] 
+2025-07-01T04:33:02.502Z	✘ [ERROR] Error: Command failed with exit code 126: ./build-worker.sh
+2025-07-01T04:33:02.503Z	
+2025-07-01T04:33:02.504Z	  /bin/sh: 1: ./build-worker.sh: Permission denied
+2025-07-01T04:33:02.504Z	      at makeError (/opt/buildhome/repo/node_modules/wrangler/wrangler-dist/cli.js:59394:18)
+2025-07-01T04:33:02.504Z	      at handlePromise (/opt/buildhome/repo/node_modules/wrangler/wrangler-dist/cli.js:59872:29)
+2025-07-01T04:33:02.504Z	      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-01T04:33:02.504Z	      at async runCustomBuild (/opt/buildhome/repo/node_modules/wrangler/wrangler-dist/cli.js:60072:7)
+2025-07-01T04:33:02.504Z	      at async getEntry (/opt/buildhome/repo/node_modules/wrangler/wrangler-dist/cli.js:80432:3)
+2025-07-01T04:33:02.505Z	      at async Object.handler (/opt/buildhome/repo/node_modules/wrangler/wrangler-dist/cli.js:80904:23)
+2025-07-01T04:33:02.505Z	      at async Object.handler (/opt/buildhome/repo/node_modules/wrangler/wrangler-dist/cli.js:77880:7) {
+2025-07-01T04:33:02.505Z	    shortMessage: 'Command failed with exit code 126: ./build-worker.sh',
+2025-07-01T04:33:02.505Z	    command: './build-worker.sh',
+2025-07-01T04:33:02.506Z	    escapedCommand: '"./build-worker.sh"',
+2025-07-01T04:33:02.509Z	    exitCode: 126,
+2025-07-01T04:33:02.509Z	    signal: undefined,
+2025-07-01T04:33:02.510Z	    signalDescription: undefined,
+2025-07-01T04:33:02.510Z	    stdout: '',
+2025-07-01T04:33:02.510Z	    stderr: '/bin/sh: 1: ./build-worker.sh: Permission denied',
+2025-07-01T04:33:02.510Z	    failed: true,
+2025-07-01T04:33:02.510Z	    timedOut: false,
+2025-07-01T04:33:02.510Z	    isCanceled: false,
+2025-07-01T04:33:02.516Z	    killed: false
+2025-07-01T04:33:02.516Z	  }
+2025-07-01T04:33:02.516Z	
+2025-07-01T04:33:02.516Z	
+2025-07-01T04:33:02.517Z	✘ [ERROR] Running custom build `./build-worker.sh` failed. There are likely more logs from your build command above.
+2025-07-01T04:33:02.517Z	
+2025-07-01T04:33:02.517Z	
+2025-07-01T04:33:02.518Z	
+2025-07-01T04:33:02.518Z	
+2025-07-01T04:33:02.523Z	Cloudflare collects anonymous telemetry about your usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md
+2025-07-01T04:33:02.523Z	🪵  Logs were written to "/opt/buildhome/.config/.wrangler/logs/wrangler-2025-07-01_04-33-01_854.log"
+2025-07-01T04:33:02.641Z	Failed: error occurred while running deploy command

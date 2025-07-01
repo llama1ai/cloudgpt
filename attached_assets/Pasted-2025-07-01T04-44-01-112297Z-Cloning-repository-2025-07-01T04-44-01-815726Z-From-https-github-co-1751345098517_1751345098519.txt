@@ -1,0 +1,65 @@
+2025-07-01T04:44:01.112297Z	Cloning repository...
+2025-07-01T04:44:01.815726Z	From https://github.com/llama1ai/pagesgpt
+2025-07-01T04:44:01.816201Z	 * branch            7210ee5bb3199be1bce89f65f6c55461e660c742 -> FETCH_HEAD
+2025-07-01T04:44:01.8163Z	
+2025-07-01T04:44:01.847654Z	HEAD is now at 7210ee5 Add files via upload
+2025-07-01T04:44:01.848046Z	
+2025-07-01T04:44:01.924304Z	
+2025-07-01T04:44:01.92489Z	Using v2 root directory strategy
+2025-07-01T04:44:01.944417Z	Success: Finished cloning repository files
+2025-07-01T04:44:03.613088Z	Checking for configuration in a Wrangler configuration file (BETA)
+2025-07-01T04:44:03.613892Z	
+2025-07-01T04:44:03.615358Z	Found wrangler.toml file. Reading build configuration...
+2025-07-01T04:44:04.715541Z	A wrangler.toml file was found but it does not appear to be valid. Did you mean to use wrangler.toml to configure Pages? If so, then make sure the file is valid and contains the `pages_build_output_dir` property. Skipping file and continuing.
+2025-07-01T04:44:04.78244Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2025-07-01T04:44:04.783051Z	Installing project dependencies: npm clean-install --progress=false
+2025-07-01T04:44:10.148104Z	npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+2025-07-01T04:44:10.311454Z	npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+2025-07-01T04:44:17.152828Z	
+2025-07-01T04:44:17.15308Z	added 735 packages, and audited 736 packages in 12s
+2025-07-01T04:44:17.153281Z	
+2025-07-01T04:44:17.153612Z	166 packages are looking for funding
+2025-07-01T04:44:17.153794Z	  run `npm fund` for details
+2025-07-01T04:44:17.182441Z	
+2025-07-01T04:44:17.182708Z	12 vulnerabilities (1 low, 9 moderate, 2 high)
+2025-07-01T04:44:17.182846Z	
+2025-07-01T04:44:17.182964Z	To address issues that do not require attention, run:
+2025-07-01T04:44:17.183109Z	  npm audit fix
+2025-07-01T04:44:17.183275Z	
+2025-07-01T04:44:17.183385Z	To address all issues (including breaking changes), run:
+2025-07-01T04:44:17.183487Z	  npm audit fix --force
+2025-07-01T04:44:17.183583Z	
+2025-07-01T04:44:17.18372Z	Run `npm audit` for details.
+2025-07-01T04:44:17.221702Z	Executing user command: npm run build
+2025-07-01T04:44:17.59273Z	
+2025-07-01T04:44:17.59298Z	> rest-express@1.0.0 build
+2025-07-01T04:44:17.593535Z	> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+2025-07-01T04:44:17.593682Z	
+2025-07-01T04:44:17.845731Z	[36mvite v5.4.19 [32mbuilding for production...[36m[39m
+2025-07-01T04:44:17.896679Z	transforming...
+2025-07-01T04:44:18.268227Z	Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+2025-07-01T04:44:18.268806Z	  npx update-browserslist-db@latest
+2025-07-01T04:44:18.269028Z	  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2025-07-01T04:44:21.389653Z	[32m✓[39m 1967 modules transformed.
+2025-07-01T04:44:21.657578Z	rendering chunks...
+2025-07-01T04:44:21.669729Z	computing gzip size...
+2025-07-01T04:44:21.684804Z	[2m../dist/public/[22m[32mindex.html                 [39m[1m[2m  1.03 kB[22m[1m[22m[2m │ gzip:   0.55 kB[22m
+2025-07-01T04:44:21.685044Z	[2m../dist/public/[22m[2massets/[22m[35mindex-qIvdaJJu.css  [39m[1m[2m 58.21 kB[22m[1m[22m[2m │ gzip:   9.48 kB[22m
+2025-07-01T04:44:21.685156Z	[2m../dist/public/[22m[2massets/[22m[36mindex-CN4l41Sx.js   [39m[1m[2m483.34 kB[22m[1m[22m[2m │ gzip: 151.51 kB[22m
+2025-07-01T04:44:21.685348Z	[32m✓ built in 3.81s[39m
+2025-07-01T04:44:21.736406Z	
+2025-07-01T04:44:21.736775Z	  dist/index.js  100.2kb
+2025-07-01T04:44:21.736908Z	
+2025-07-01T04:44:21.737137Z	⚡ Done in 12ms
+2025-07-01T04:44:21.755678Z	Finished
+2025-07-01T04:44:22.663095Z	Checking for configuration in a Wrangler configuration file (BETA)
+2025-07-01T04:44:22.66358Z	
+2025-07-01T04:44:22.664135Z	Found wrangler.toml file. Reading build configuration...
+2025-07-01T04:44:23.762254Z	A wrangler.toml file was found but it does not appear to be valid. Did you mean to use wrangler.toml to configure Pages? If so, then make sure the file is valid and contains the `pages_build_output_dir` property. Skipping file and continuing.
+2025-07-01T04:44:23.763229Z	Found Functions directory at /functions. Uploading.
+2025-07-01T04:44:23.768688Z	 ⛅️ wrangler 3.101.0
+2025-07-01T04:44:23.768929Z	-------------------
+2025-07-01T04:44:24.695844Z	✨ Compiled Worker successfully
+2025-07-01T04:44:25.769739Z	Validating asset output directory
+2025-07-01T04:44:25.770119Z	Error: Output directory "build/client" not found.
+2025-07-01T04:44:26.820496Z	Failed: build output directory not found

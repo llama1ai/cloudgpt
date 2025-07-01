@@ -1,0 +1,78 @@
+import React from 'react';
+
+export interface MessageBubbleProps {
+  /** The message content to display */
+  content: string;
+  /** Whether this is a user or assistant message */
+  variant?: 'user' | 'assistant';
+  /** Size of the bubble: affects padding and font-size */
+  size?: 'sm' | 'md' | 'lg';
+  /** Override background color */
+  bgColor?: string;
+  /** Override text color */
+  textColor?: string;
+  /** Disabled state: reduce opacity and disable interactions */
+  disabled?: boolean;
+  /** Validation state: 'valid' or 'invalid' */
+  validation?: 'valid' | 'invalid';
+  /** Additional class names for custom styling */
+  className?: string;
+}
+
+const sizeStyles = {
+  sm: 'text-xs py-2 px-3',     // 12px x-axis, 8px y-axis
+  md: 'text-sm py-3 px-4',     // 16px x-axis, 12px y-axis
+  lg: 'text-base py-4 px-6',   // 24px x-axis, 16px y-axis
+};
+
+/**
+ * MessageBubble: clones OpenAI's message bubble design exactly.
+ */
+const MessageBubble: React.FC<MessageBubbleProps> = ({
+  content,
+  variant = 'user',
+  size = 'md',
+  bgColor,
+  textColor,
+  disabled = false,
+  validation,
+  className = '',
+}) => {
+  // Default theme colors from OpenAI
+  const defaultBg = variant === 'assistant' ? '#FFFFFF' : '#F7F7F8';
+  const defaultText = '#000000';
+
+  // Validation border
+  const validationClass =
+    validation === 'valid'
+      ? 'border border-green-500'
+      : validation === 'invalid'
+      ? 'border border-red-500'
+      : '';
+
+  return (
+    <div
+      role="text"
+      tabIndex={0}
+      className={`
+        inline-block
+        rounded-xl
+        shadow-sm
+        focus:outline-none focus:ring-2 focus:ring-blue-500
+        ${sizeStyles[size]}
+        ${validationClass}
+        ${disabled ? 'opacity-50 pointer-events-none' : 'opacity-100'}
+        ${className}
+      `}
+      style={{
+        backgroundColor: bgColor || defaultBg,
+        color: textColor || defaultText,
+      }}
+      aria-disabled={disabled}
+    >
+      {content}
+    </div>
+  );
+};
+
+export default MessageBubble;

@@ -47,7 +47,7 @@ Aplikacja została przekonfigurowana do działania z Vercel Functions zamiast Ex
 ### Struktura dla Vercel:
 
 - `api/messages.ts` - Vercel Function obsługująca wiadomości
-- `vercel.json` - Konfiguracja Vercel
+- `vercel.json` - Konfiguracja Vercel (z ustawioną opcją "version": 2)
 - `dist/public/` - Statyczne pliki frontenda (po build)
 
 ### Różnice od Express:
